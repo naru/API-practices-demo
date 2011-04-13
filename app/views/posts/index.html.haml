@@ -1,0 +1,10 @@
+.centerized
+  .post_form
+    = form_for @post do |f|
+
+      - error_messages @post
+
+      = f.text_field :content
+      = f.submit 'Post'
+
+  = render partial: @posts

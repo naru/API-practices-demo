@@ -1,0 +1,64 @@
+* {
+  outline: none;
+  font-family: Helvetica, Arial;
+}
+
+body {
+  background: #a0b9c1;
+}
+
+.centerized {
+  width: 780px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 10px;
+} 
+
+.post_form input[type=text] {
+  width: 600px;
+  height: 40px;
+  margin-right: 15px;
+  border: 1px solid #999;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.post_form input[type=submit] {
+  width: 80px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#aaa));
+  color: #444;
+  text-align: center;
+  text-decoration: none;
+}
+
+.post_form {
+  border-bottom: 1px solid #bbb;
+  padding: 20px;
+}
+
+.post {
+  font-size: 22px;
+  color: #666;
+  padding: 5px 20px;
+  border-bottom: 1px solid #bbb;
+}
+
+.errorExplanation {
+  margin: 20px 0;
+  padding: 0 20px;
+  background: #fdf4f8;
+  border: 1px dashed #ea87b8;
+}
+
+.errorExplanation p {
+  border: 0;
+}
+
+.field_with_errors {
+  float: left;
+}
