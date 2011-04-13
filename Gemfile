@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.6'
 
+gem 'unicorn'
 gem 'mysql2'
 
 group :test, :development do
