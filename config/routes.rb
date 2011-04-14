@@ -22,6 +22,16 @@ Appi::Application.routes.draw do
       get 'index'
     end
   end
+  
+  scope 'api' do
+
+    scope 'v1' do
+      match 'posts.:format' => 'api/v1/posts#index', via: :get
+      match 'post.:format' => 'api/v1/posts#show', via: :get
+      match 'post.:format' => 'api/v1/posts#create', via: :post
+    end
+
+  end
 
   # Sample resource route with sub-resources:
   #   resources :products do
