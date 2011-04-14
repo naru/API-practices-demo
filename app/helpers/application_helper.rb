@@ -1,7 +1,6 @@
 module ApplicationHelper
 
   def error_messages(record)
-    logger.debug record.errors
     if record.errors.any?
       class_name = record.class.name.underscore
       
@@ -14,7 +13,7 @@ module ApplicationHelper
 
       record.errors.each do |e, message|
         name = t("activerecord.attributes.#{class_name}.#{e}")
-        concat content_tag(:li, "#{name} #{message}")
+        concat content_tag(:li, "#{message}")
       end
                  
       concat '</ul>'.html_safe

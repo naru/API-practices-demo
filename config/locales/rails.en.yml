@@ -1,0 +1,102 @@
+en:
+  errors:
+    template:
+      header: "%{model} couldn't be saved"
+      body: "Following problems occured:"
+
+  activemodel:
+    errors:
+      template:
+        header:
+          one:   "One error occure when saving %{model}"
+          other: "%{count} errors occured when saving %{model}"
+        # The variable :count is also available
+        body: "There we're problems with the following fields:"
+
+  activerecord:
+    errors:
+      # model.errors.full_messages normat.
+      format: "%{attribute} %{message}"
+      
+      template:
+        header:
+          one:   "One error occure when saving %{model}"
+          other: "%{count} errors occured when saving %{model}"
+        # The variable :count is also available
+        body: "There we're problems with the following fields:"
+      
+      # The values :model, :attribute and :value are always available for interpolation
+      # The value :count is available when applicable. Can be used for pluralization.
+      messages:
+        blank:        "%{attribute} can't be blank"
+        invalid:      "%{attribute} is invalid"
+        too_short:    "%{attribute} is too short"
+        too_long:     "%{attribute} is too long"
+        wrong_length: "%{attribute} is the wrong length"
+        taken:        "%{attribute}, {value}, is already taken"
+        # Append your own errors here or at the model/attributes scope.
+
+      # You can define own errors for models or model attributes.
+      # The values :model, :attribute and :value are always available for interpolation.
+      #
+      # For example,
+      #   models:
+      #     user:
+      #       blank: "This is a custom blank message for %{model}: %{attribute}"
+      #       attributes:
+      #         login:
+      #           blank: "This is a custom blank message for User login"
+      # Will define custom blank validation message for User model and
+      # custom blank validation message for login attribute of User model.
+      # models:
+
+    # Translate model names. Used in Model.human_name().
+    models:
+      post: "Post"
+    #
+    # Translate model attribute names. Used in Model.human_attribute_name(attribute).
+    attributes:
+      post:
+        content: "Content"
+
+  date:
+    formats:
+      # Use the strftime parameters for formats.
+      # When no format has been given, it uses default.
+      # You can provide other formats here if you like!
+      default: "%Y-%m-%d"
+      short: "%e %b"
+      long: "%e %B %Y"
+
+    day_names: [söndag, måndag, tisdag, onsdag, torsdag, fredag, lördag]
+    abbr_day_names: [sön, mån, tis, ons, tor, fre, lör]
+
+    # Don't forget the nil at the beginning; there's no such thing as a 0th month
+    month_names: [~, januari, februari, mars, april, maj, juni, juli, augusti, september, oktober, november, december]
+    abbr_month_names: [~, jan, feb, mar, apr, maj, jun, jul, aug, sep, okt, nov, dec]
+    # Used in date_select and datime_select.
+    order: [ :day, :month, :year ]
+
+  time:
+    formats:
+      default: "%a, %e %b %Y %H:%M:%S %z"
+      short: "%e %b %H:%M"
+      long: "%e %B %Y %H:%M"
+    am: ""
+    pm: ""
+
+# Used in array.to_sentence.
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " och "
+      last_word_connector: " och "
+    select:
+      # default value for :prompt => true in FormOptionsHelper
+      prompt: "Välj"
+
+  helpers:
+    submit:
+      create: "Skapa %{model}"
+      update: "Uppdatera %{model}"
+
