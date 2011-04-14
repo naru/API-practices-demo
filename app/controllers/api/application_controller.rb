@@ -8,7 +8,7 @@ class API::ApplicationController < ApplicationController
 
   private
 
-  def parse_body
+  def parse_body_json
     @attributes = JSON.parse(request.body.read)
   end
 

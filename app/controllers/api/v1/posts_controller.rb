@@ -1,6 +1,6 @@
 class Api::V1::PostsController < API::V1::ApplicationController
   
-  before_filter :parse_body, only: :create
+  before_filter :parse_body_json, only: :create
 
   def index
     @posts = Post.all
